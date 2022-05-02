@@ -2,12 +2,38 @@ GET http://localhost:8080/contacts HTTP/1.1
 
 ###
 
-GET http://localhost:8080/contacts/1 HTTP/1.1
+GET http://localhost:8080/contacts/626ab5336a880aa571037b76 HTTP/1.1
 
 ###
 
-GET http://localhost:8080/contacts/2 HTTP/1.1
+GET http://localhost:8080/contacts/626ab58c6a880aa571037b77 HTTP/1.1
 
 ###
 
-GET http://localhost:8080/contacts/3 HTTP/1.1
+GET http://localhost:8080/contacts/626ab5d56a880aa571037b78 HTTP/1.1
+
+###
+
+POST http://localhost:8080/contacts HTTP/1.1
+Content-Type: application/json
+  
+{
+  "firstName": "Edward",
+  "lastName": "McConkie",
+  "email": "edwardmcconkie@gmail.com",
+  "birthday": "08/17/1998",
+  "favoriteColor": "blue"
+}
+
+###
+
+PUT http://localhost:8080/contacts/627006233263442f36ade679 HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstName": "Edison"
+}
+
+###
+
+DELETE http://localhost:8080/contacts/627005e3b85a04370fa7a7d5 HTTP/1.1
