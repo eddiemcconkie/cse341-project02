@@ -51,15 +51,27 @@ const createContact = async (req, res) => {
 
 const updateContact = async (req, res) => {
   const _id = ObjectId(req.params.id)
-  db()
-    .collection('contacts')
-    .updateOne({ _id }, { $set: req.body }, (error) => {
-      if (error) {
-        return res.status(500).json({ error })
-      } else {
-        return res.status(204).json()
-      }
-    })
+  if (
+    req.body.firstName ||
+    req.body.lastName ||
+    req.body.email ||
+    req.body.birthday ||
+    req.body.favoriteColor
+  ) {
+    db()
+      .collection('contacts')
+      .updateOne({ _id }, { $set: req.body }, (error) => {
+        if (error) {
+          return res.status(500).json({ error })
+        } else {
+          return res.status(204).json()
+        }
+      })
+  } else {
+    return res
+      .status(400)
+      .json({ error: 'Please provide data to update the contact with' })
+  }
 }
 
 const deleteContact = async (req, res) => {

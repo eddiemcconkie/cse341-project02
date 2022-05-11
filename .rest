@@ -1,3 +1,5 @@
+##### DEVELOPMENT #####
+
 GET http://localhost:8080/contacts HTTP/1.1
 
 ###
@@ -36,4 +38,48 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:8080/contacts/627005e3b85a04370fa7a7d5 HTTP/1.1
+DELETE https://localhost:8080/contacts/627005e3b85a04370fa7a7d5 HTTP/1.1
+
+
+
+##### PRODUCTION #####
+
+GET https://cse341-project02.herokuapp.com/contacts HTTP/1.1
+
+###
+
+GET https://cse341-project02.herokuapp.com/contacts/626ab5336a880aa571037b76 HTTP/1.1
+
+###
+
+GET https://cse341-project02.herokuapp.com/contacts/626ab58c6a880aa571037b77 HTTP/1.1
+
+###
+
+GET https://cse341-project02.herokuapp.com/contacts/6270347c91f14ccd08bad2ed HTTP/1.1
+
+###
+
+POST https://cse341-project02.herokuapp.com/contacts HTTP/1.1
+Content-Type: application/json
+  
+{
+  "firstName": "Emily",
+  "lastName": "McConkie",
+  "email": "emily.mcconkie@gmail.com",
+  "birthday": "03/15/2000",
+  "favoriteColor": "red"
+}
+
+###
+
+PUT https://cse341-project02.herokuapp.com/contacts/6270347c91f14ccd08bad2ed HTTP/1.1
+Content-Type: application/json
+
+{
+  "favoriteColor": "yellow"
+}
+
+###
+
+DELETE https://cse341-project02.herokuapp.com/contacts/6270347c91f14ccd08bad2ed HTTP/1.1

@@ -5,8 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node .",
-    "dev": "nodemon .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node ./swagger.js && nodemon .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "swagger-autogen": "node ./swagger.js"
   },
   "keywords": [],
   "author": "",
@@ -15,13 +16,15 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.18.0",
-    "mongodb": "^4.5.0"
+    "mongodb": "^4.5.0",
+    "swagger-ui-express": "^4.3.0"
   },
   "devDependencies": {
     "eslint": "^8.14.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "nodemon": "^2.0.15",
-    "prettier": "^2.6.2"
+    "prettier": "^2.6.2",
+    "swagger-autogen": "^2.21.1"
   }
 }

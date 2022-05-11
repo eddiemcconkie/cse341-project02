@@ -1,0 +1,1 @@
+node ./swagger.js && node .
