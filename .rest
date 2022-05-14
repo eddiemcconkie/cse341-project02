@@ -38,7 +38,7 @@ Content-Type: application/json
 
 ###
 
-DELETE https://localhost:8080/contacts/627005e3b85a04370fa7a7d5 HTTP/1.1
+DELETE http://localhost:8080/contacts/62803d47c0467e1d3a492508 HTTP/1.1
 
 
 
@@ -82,4 +82,4 @@ Content-Type: application/json
 
 ###
 
-DELETE https://cse341-project02.herokuapp.com/contacts/6270347c91f14ccd08bad2ed HTTP/1.1
+DELETE https://cse341-project02.herokuapp.com/contacts/62802f42035186a231ce82af HTTP/1.1
